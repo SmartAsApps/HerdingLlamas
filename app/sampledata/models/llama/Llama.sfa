@@ -1,0 +1,61 @@
+{
+   materials: [
+      {
+         name: "Llama_Mat",
+         parameters: [
+            {
+               baseColor: "Llama_BaseColor",
+            },
+            {
+               baseColorTint: [
+                  1,
+                  1,
+                  1,
+                  1,
+               ],
+            },
+            {
+               metallic: 0,
+            },
+            {
+               roughness: 1,
+            },
+            {
+               opacity: null,
+            },
+         ],
+         source: "build/sceneform_sdk/default_materials/obj_material.sfm",
+      },
+   ],
+   model: {
+      attributes: [
+         "Position",
+         "TexCoord",
+         "Orientation",
+      ],
+      file: "sampledata/models/llama/Llama.obj",
+      name: "Llama",
+      scale: 0.2,
+      suggested_collision: {
+         center: {
+            x: 0,
+            y: 0.176574,
+            z: -0.8407110000000002,
+         },
+         size: {
+            x: 2.335588,
+            y: 0.353148,
+            z: 4.754747999999999,
+         },
+         type: "Box",
+      },
+   },
+   samplers: [
+      {
+         file: "sampledata/models/llama/Llama_BaseColor.png",
+         name: "Llama_BaseColor",
+         pipeline_name: "Llama_BaseColor.png",
+      },
+   ],
+   version: "0.51:1",
+}

@@ -1,0 +1,79 @@
+{
+   materials: [
+      {
+         name: "lambert2SG",
+         parameters: [
+            {
+               baseColor: null,
+            },
+            {
+               baseColorTint: [
+                  0.080000000000000002,
+                  0.059999999999999998,
+                  0.040000000000000001,
+                  1,
+               ],
+            },
+            {
+               metallic: 0,
+            },
+            {
+               roughness: 1,
+            },
+            {
+               opacity: null,
+            },
+         ],
+         source: "build/sceneform_sdk/default_materials/obj_material.sfm",
+      },
+      {
+         name: "lambert3SG",
+         parameters: [
+            {
+               baseColor: null,
+            },
+            {
+               baseColorTint: [
+                  0.080000000000000002,
+                  0.070000000000000007,
+                  0.070000000000000007,
+                  1,
+               ],
+            },
+            {
+               metallic: 0,
+            },
+            {
+               roughness: 1,
+            },
+            {
+               opacity: null,
+            },
+         ],
+         source: "build/sceneform_sdk/default_materials/obj_material.sfm",
+      },
+   ],
+   model: {
+      attributes: [
+         "Position",
+         "TexCoord",
+         "Orientation",
+      ],
+      file: "sampledata/models/fence/SM_PicketFence_02.obj",
+      name: "SM_PicketFence_02",
+      suggested_collision: {
+         center: {
+            x: 0,
+            y: 0.4957295,
+            z: 0,
+         },
+         size: {
+            x: 2.094382,
+            y: 1.006105,
+            z: 0.12937,
+         },
+         type: "Box",
+      },
+   },
+   version: "0.51:1",
+}
