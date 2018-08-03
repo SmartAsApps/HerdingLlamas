@@ -16,10 +16,7 @@ class LlamaLogic : Scene.OnUpdateListener {
 
     fun init(scene: Scene) {
         this.scene = scene
-    }
-
-    fun calibrationFinished() {
-        scene.setOnUpdateListener(this)
+        scene.addOnUpdateListener(this)
     }
 
     override fun onUpdate(frameTime: FrameTime) {

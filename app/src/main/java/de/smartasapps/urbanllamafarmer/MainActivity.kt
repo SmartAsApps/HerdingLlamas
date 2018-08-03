@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         nodeCreator.init(this)
         arFragment.setOnTapArPlaneListener { hitResult, plane, motionEvent ->
             val scene = arFragment.arSceneView?.scene ?: return@setOnTapArPlaneListener
-            llamaLogic.calibrationFinished()
             val node = objectPlacement.placeObject(hitResult)
             scene.addChild(node)
         }
