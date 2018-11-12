@@ -1,7 +1,7 @@
 package de.smartasapps.urbanllamafarmer
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.google.ar.sceneform.ux.ArFragment
 import de.smartasapps.urbanllamafarmer.logic.LlamaLogic
 import de.smartasapps.urbanllamafarmer.nodes.NodeCreator
