@@ -1,5 +1,5 @@
 # HerdingLlamas
-ARCore and Sceneform sample app for Droidcon 2018 session
+ARCore and Sceneform sample app for my Droidcon Berlin 2018 session. The video of the session can be found here: https://www.youtube.com/watch?v=108YfrVdEKU .
 
 ## Acknoledgements
 The models used in this app are downloaded from Google Poly and used under the CC-BY license. Author is Poly by Google.
