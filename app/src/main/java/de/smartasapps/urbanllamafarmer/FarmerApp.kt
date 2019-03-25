@@ -7,6 +7,6 @@ import org.koin.android.ext.android.startKoin
 class FarmerApp : Application() {
     override fun onCreate() {
         super.onCreate()
-        startKoin(listOf(myModule, nodeCreateModule))
+        startKoin(this, listOf(myModule, nodeCreateModule))
     }
 }

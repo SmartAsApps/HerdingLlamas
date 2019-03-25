@@ -8,7 +8,6 @@ import de.smartasapps.urbanllamafarmer.nodes.NodeCreator
 import de.smartasapps.urbanllamafarmer.placement.ObjectPlacement
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
-import org.koin.standalone.StandAloneContext
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,8 +26,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         arFragment = supportFragmentManager.findFragmentById(R.id.arFragment) as ArFragment
-        StandAloneContext.loadProperties(extraProperties = mapOf(Pair("transSys", arFragment.transformationSystem), Pair("scene", arFragment.arSceneView.session)))
-        nodeCreator.init(this)
+        nodeCreator.init(this, arFragment.transformationSystem)
         arFragment.setOnTapArPlaneListener { hitResult, plane, motionEvent ->
             val scene = arFragment.arSceneView?.scene ?: return@setOnTapArPlaneListener
             val node = objectPlacement.placeObject(hitResult)

@@ -5,14 +5,16 @@ import com.google.ar.sceneform.Node
 import com.google.ar.sceneform.rendering.ModelRenderable
 import com.google.ar.sceneform.ux.TransformationSystem
 import de.smartasapps.urbanllamafarmer.R
-import org.koin.dsl.module.applicationContext
+import org.koin.dsl.module.module
 
-class NodeCreator constructor(private val transformationSystem: TransformationSystem) {
+class NodeCreator {
     private lateinit var llamaRenderable: ModelRenderable
     private lateinit var fenceRenderable: ModelRenderable
     private lateinit var heartRenderable: ModelRenderable
+    private lateinit var transformationSystem: TransformationSystem
 
-    fun init(context: Context) {
+    fun init(context: Context, transformationSystem: TransformationSystem) {
+        this.transformationSystem = transformationSystem
         ModelRenderable.builder().setSource(context, R.raw.llama).build().thenAccept { llamaRenderable = it }
         ModelRenderable.builder().setSource(context, R.raw.fence).build().thenAccept { fenceRenderable = it }
         ModelRenderable.builder().setSource(context, R.raw.heart).build().thenAccept { heartRenderable = it }
@@ -37,6 +39,6 @@ class NodeCreator constructor(private val transformationSystem: TransformationSy
     }
 }
 
-val nodeCreateModule = applicationContext {
-    bean { NodeCreator(getProperty("transSys")) }
+val nodeCreateModule = module {
+    single { NodeCreator() }
 }
